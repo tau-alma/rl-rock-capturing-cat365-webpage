@@ -2,38 +2,78 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
-
 .footer .icon-link {
-    font-size: 25px;
-    color: #000;
+  font-size: 25px;
+  color: #000;
 }
 
 .link-block a {
-    margin-top: 5px;
-    margin-bottom: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 
 .dnerf {
   font-variant: small-caps;
 }
 
+/* -----------------------------
+   Teaser
+----------------------------- */
+
+.teaser {
+  font-family: 'Google Sans', sans-serif;
+}
 
 .teaser .hero-body {
   padding-top: 0;
   padding-bottom: 3rem;
 }
 
-.teaser {
+.teaser-video {
+  width: 80%;      /* adjust 70–90% */
+  height: auto;
+  display: block;
+  margin: 0 auto;  /* center */
+}
+
+/* -----------------------------
+   Publication header / video
+----------------------------- */
+
+.publication-title {
   font-family: 'Google Sans', sans-serif;
 }
 
+.publication-authors {
+  font-family: 'Google Sans', sans-serif;
+}
 
-.publication-title {
+.publication-venue {
+  color: #555;
+  width: fit-content;
+  font-weight: bold;
+}
+
+.publication-awards {
+  color: #ff3860;
+  width: fit-content;
+  font-weight: bolder;
+}
+
+.publication-authors a {
+  color: hsl(204, 86%, 53%) !important;
+}
+
+.publication-authors a:hover {
+  text-decoration: underline;
+}
+
+.author-block {
+  display: inline-block;
 }
 
 .publication-banner {
   max-height: parent;
-
 }
 
 .publication-banner video {
@@ -44,89 +84,78 @@ body {
   object-fit: fit;
 }
 
-.publication-header .hero-body {
-}
-
-.publication-title {
-    font-family: 'Google Sans', sans-serif;
-}
-
-.publication-authors {
-    font-family: 'Google Sans', sans-serif;
-}
-
-.publication-venue {
-    color: #555;
-    width: fit-content;
-    font-weight: bold;
-}
-
-.publication-awards {
-    color: #ff3860;
-    width: fit-content;
-    font-weight: bolder;
-}
-
-.publication-authors {
-}
-
-.publication-authors a {
-   color: hsl(204, 86%, 53%) !important;
-}
-
-.publication-authors a:hover {
-    text-decoration: underline;
-}
-
-.author-block {
-  display: inline-block;
-}
-
-.publication-banner img {
-}
-
-.publication-authors {
-  /*color: #4286f4;*/
-}
-
 .publication-video {
-    position: relative;
-    width: 100%;
-    height: 0;
-    padding-bottom: 56.25%;
-
-    overflow: hidden;
-    border-radius: 10px !important;
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+  border-radius: 10px !important;
 }
 
 .publication-video iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-.publication-body img {
-}
+/* -----------------------------
+   Results carousel + figures carousel
+----------------------------- */
 
 .results-carousel {
   overflow: hidden;
 }
 
+/* Card styling for each slide */
 .results-carousel .item {
   margin: 5px;
   overflow: hidden;
-  border: 1px solid #bbb;
-  border-radius: 10px;
+  border: 1px solid #d0d0d0;
+  border-radius: 12px;
+  background: #fff;
   padding: 0;
-  font-size: 0;
+  font-size: 0; /* keeps media flush; captions override font-size */
 }
 
-.results-carousel video {
+/* Make media fill the card */
+.results-carousel video,
+.results-carousel img {
+  width: 100%;
+  height: auto;
+  display: block;
   margin: 0;
 }
 
+/* Captions (paper-like) */
+.results-carousel .video-caption {
+  font-size: 0.95rem;   /* overrides the item's font-size:0 */
+  line-height: 1.2;
+  margin: 0;
+  padding: 0.65rem 0.75rem;
+  text-align: center;
+  color: #444;
+  background: #fafafa;
+  border-top: 1px solid #e6e6e6;
+  letter-spacing: 0.2px;
+}
+
+.results-carousel .caption-label {
+  font-weight: 700;
+  margin-right: 0.35rem;
+  color: #222;
+}
+
+/* Section title styling */
+.evaluation-title {
+  margin-bottom: 0.75rem;
+}
+
+/* -----------------------------
+   Interpolation panel
+----------------------------- */
 
 .interpolation-panel {
   background: #f5f5f5;
@@ -138,13 +167,6 @@ body {
   border-radius: 5px;
 }
 
-.interpolation-video-column {
-}
-
-.interpolation-panel .slider {
-  margin: 0 !important;
-}
-
 .interpolation-panel .slider {
   margin: 0 !important;
 }
@@ -152,6 +174,82 @@ body {
 #interpolation-image-wrapper {
   width: 100%;
 }
+
 #interpolation-image-wrapper img {
   border-radius: 5px;
+}
+
+.figures-carousel {
+  overflow: hidden;
+}
+
+.figures-carousel .item {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #d0d0d0;
+  border-radius: 12px;
+  background: #fff;
+  padding: 0;
+  font-size: 0;
+}
+
+.figures-carousel img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.figures-carousel .video-caption {
+  font-size: 0.95rem;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0.65rem 0.75rem;
+  text-align: center;
+  color: #444;
+  background: #fafafa;
+  border-top: 1px solid #e6e6e6;
+}
+
+.figure-card {
+  margin: 5px;
+  overflow: hidden;
+  border: 1px solid #d0d0d0;
+  border-radius: 12px;
+  background: #fff;
+}
+
+.figure-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.figure-caption {
+  font-size: 0.95rem;
+  line-height: 1.2;
+  margin: 0;
+  padding: 0.65rem 0.75rem;
+  text-align: center;
+  color: #444;
+  background: #fafafa;
+  border-top: 1px solid #e6e6e6;
+}
+
+.figure-caption .caption-label {
+  font-weight: 700;
+  margin-right: 0.35rem;
+  color: #222;
+}
+
+.figure-card {
+  max-width: 80%;   /* try 70–90% */
+  margin: 0 auto;   /* center it */
+}
+
+.success-rate {
+  display: block;
+  margin-top: 0.25rem;
+  font-size: 0.85rem;
+  color: #666;
+  font-weight: 400;
 }
